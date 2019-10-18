@@ -1,5 +1,6 @@
 package com.myfirstapplication.pjoneverone.fragment
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -7,9 +8,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import com.myfirstapplication.pjoneverone.R
 import com.myfirstapplication.pjoneverone.activity.MainPageActivity
+import com.myfirstapplication.pjoneverone.adapter.SubCatRecyclerAdapter
+import com.myfirstapplication.pjoneverone.recycler_data.RecycelrMainData
 import kotlinx.android.synthetic.main.fragment_read_data.view.*
+import org.json.JSONObject
 
 class ReadDataFragment: Fragment() {
 
@@ -20,9 +29,14 @@ class ReadDataFragment: Fragment() {
     ): View? {
         var view = inflater.inflate(R.layout.fragment_read_data, container, false)
 
-        var string = ""
+        var loginInfo = context!!.getSharedPreferences("userLoginInfo", Context.MODE_PRIVATE)
 
+        var string = ""
         var id = ""
+        var apiID = loginInfo.getString("appapikey", null)
+        var uID = loginInfo.getString("id", null)
+
+        var subButton: ArrayList<RecycelrMainData> = ArrayList()
 
         if (arguments!!.getString("passTheCatName") != null && arguments!!.getString("passTheCatID") != null){
             string = arguments!!.getString("passTheCatName").toString()
@@ -31,8 +45,45 @@ class ReadDataFragment: Fragment() {
             Log.i("In read Frag", string)
             Log.i("In read Frag", id)
         }
-        
-        Log.d("In read Frag", string)
+
+        Log.d("InreadFrag", uID)
+        Log.d("InreadFrag", apiID)
+        Log.d("InreadFrag", id)
+
+        view.read_data_recycler.layoutManager = LinearLayoutManager(context)
+
+        var url = ("http://rjtmobile.com/ansari/shopingcart/androidapp/cust_sub_category.php?Id="+ id +
+                "&api_key=" + apiID + "&user_id=" + uID)
+
+
+        var myReq = Volley.newRequestQueue(this.context)
+
+        var request = StringRequest(Request.Method.GET, url,
+            Response.Listener {
+
+                var jsonObject = JSONObject(it)
+                var jsonArray = jsonObject.getJSONArray("subcategory")
+
+                for (i in 0 until(jsonArray.length())){
+
+                    var contact = jsonArray.getJSONObject(i)
+
+                    var subCatName = contact.getString("scname")
+                    var subCatID = contact.getString("scid")
+
+                    subButton.add(RecycelrMainData(subCatName, subCatID))
+
+                }
+
+                for (i in 0 until subButton.size){
+                    Log.i("inSubList", subButton[i].toString())
+                }
+
+                view.read_data_recycler.adapter = SubCatRecyclerAdapter(subButton, this.context)
+
+            }, Response.ErrorListener {  })
+
+        myReq.add(request)
 
         view.image_button_rd_data.setOnClickListener(View.OnClickListener {
 
