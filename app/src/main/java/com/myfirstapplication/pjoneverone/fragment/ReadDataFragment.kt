@@ -20,27 +20,19 @@ class ReadDataFragment: Fragment() {
     ): View? {
         var view = inflater.inflate(R.layout.fragment_read_data, container, false)
 
-//        var string = ""
-//        if(arguments!!.getString("pass_end_point_0") != null && arguments!!.getString("pass_p_0_name") != null){
-//            string = arguments!!.getString("pass_end_point_0")!!
-//            view.text_view_toolbar_title.text = arguments!!.getString("pass_p_0_name")
-//        }else if(arguments!!.getString("pass_end_point_1") != null && arguments!!.getString("pass_p_1_name") != null){
-//            string = arguments!!.getString("pass_end_point_1")!!
-//            view.text_view_toolbar_title.text = arguments!!.getString("pass_p_1_name")
-//        }else if(arguments!!.getString("pass_end_point_2") != null && arguments!!.getString("pass_p_2_name") != null){
-//            string = arguments!!.getString("pass_end_point_2")!!
-//            view.text_view_toolbar_title.text = arguments!!.getString("pass_p_2_name")
-//        }else if(arguments!!.getString("pass_end_point_3") != null && arguments!!.getString("pass_p_3_name") != null){
-//            string = arguments!!.getString("pass_end_point_3")!!
-//            view.text_view_toolbar_title.text = arguments!!.getString("pass_p_3_name")
-//        }
-//
-//        Log.d("In read Frag", string)
+        var string = ""
 
+        var id = ""
 
-
-
-
+        if (arguments!!.getString("passTheCatName") != null && arguments!!.getString("passTheCatID") != null){
+            string = arguments!!.getString("passTheCatName").toString()
+            id = arguments!!.getString("passTheCatID").toString()
+            view.text_view_toolbar_title.text = arguments!!.getString("passTheCatName")
+            Log.i("In read Frag", string)
+            Log.i("In read Frag", id)
+        }
+        
+        Log.d("In read Frag", string)
 
         view.image_button_rd_data.setOnClickListener(View.OnClickListener {
 

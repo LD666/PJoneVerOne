@@ -13,59 +13,19 @@ import com.myfirstapplication.pjoneverone.fragment.UserFragment
 import com.myfirstapplication.pjoneverone.myinterf.MyInterface
 
 class MainPageActivity : AppCompatActivity(), MyInterface {
-    override fun ItIsMeat(bundle: Bundle) {
-        var readDataFrag = ReadDataFragment()
-        var pass = bundle.getString("end_point_0")
-        var name = bundle.getString("p_0_name")
-        Log.d("In MP get", bundle.getString("end_point_0"))
-        Log.d("In MP get", bundle.getString("p_0_name"))
-        bundle.putString("pass_end_point_0", pass)
-        bundle.putString("pass_p_0_name", name)
-        Log.d("In MP pass", bundle.getString("pass_end_point_0"))
-        Log.d("In MP pass", bundle.getString("pass_p_0_name"))
-        readDataFrag.arguments = bundle
-        supportFragmentManager.beginTransaction().replace(R.id.main_page, readDataFrag).commit()
-    }
 
-    override fun ItIsFruit(bundle: Bundle) {
-        var readDataFrag = ReadDataFragment()
-        var pass = bundle.getString("end_point_1")
-        var name = bundle.getString("p_1_name")
-        Log.d("In MP get", bundle.getString("end_point_1"))
-        Log.d("In MP get", bundle.getString("p_1_name"))
-        bundle.putString("pass_end_point_1", pass)
-        bundle.putString("pass_p_1_name", name)
-        Log.d("In MP pass", bundle.getString("pass_end_point_1"))
-        Log.d("In MP pass", bundle.getString("pass_p_1_name"))
-        readDataFrag.arguments = bundle
-        supportFragmentManager.beginTransaction().replace(R.id.main_page, readDataFrag).commit()
-    }
-
-    override fun itIsVegetable(bundle: Bundle) {
-        var readDataFrag = ReadDataFragment()
-        var pass = bundle.getString("end_point_2")
-        var name = bundle.getString("p_2_name")
-        Log.d("In MP get", bundle.getString("end_point_2"))
-        Log.d("In MP get", bundle.getString("p_2_name"))
-        bundle.putString("pass_end_point_2", pass)
-        bundle.putString("pass_p_2_name", name)
-        Log.d("In MP pass", bundle.getString("pass_end_point_2"))
-        Log.d("In MP pass", bundle.getString("pass_p_2_name"))
-        readDataFrag.arguments = bundle
-        supportFragmentManager.beginTransaction().replace(R.id.main_page, readDataFrag).commit()
-    }
-
-    override fun itIsSeaFood(bundle: Bundle) {
-        var readDataFrag = ReadDataFragment()
-        var name = bundle.getString("p_3_name")
-        var pass = bundle.getString("end_point_3")
-        Log.d("In MP get", bundle.getString("end_point_3"))
-        bundle.putString("pass_end_point_3", pass)
-        bundle.putString("pass_p_3_name", name)
-        Log.d("In MP pass", bundle.getString("pass_end_point_3"))
-        Log.d("In MP pass", bundle.getString("pass_p_3_name"))
-        readDataFrag.arguments = bundle
-        supportFragmentManager.beginTransaction().replace(R.id.main_page, readDataFrag).commit()
+    override fun passIDandName(bundle: Bundle) {
+        var readDataFragment = ReadDataFragment()
+        var passName = bundle.getString("theCatName")
+        var passID = bundle.getString("theCatID")
+        Log.i("In MP get", bundle.getString("theCatName"))
+        Log.i("In MP get", bundle.getString("theCatID"))
+        bundle.putString("passTheCatName", passName)
+        bundle.putString("passTheCatID", passID)
+        Log.i("In MP pass", bundle.getString("passTheCatName"))
+        Log.i("In MP pass", bundle.getString("passTheCatID"))
+        readDataFragment.arguments = bundle
+        supportFragmentManager.beginTransaction().replace(R.id.main_page, readDataFragment).commit()
     }
 
 
@@ -105,22 +65,6 @@ class MainPageActivity : AppCompatActivity(), MyInterface {
 
         }
 
-//        var mySettingTask = findViewById<BottomNavigationView>(R.id.bottom_nav)
-//
-//        mySettingTask.setOnNavigationItemReselectedListener {item ->
-//
-//            when (item.itemId) {
-//
-//                R.id.iteam_setting -> {
-//
-//                    Log.e("This is SETTING", "setting pressed")
-//                    var settingFragment = SettingFragment()
-//                    supportFragmentManager.beginTransaction().replace(R.id.main_page, settingFragment).commit()
-//                }
-//
-//            }
-//
-//        }
 
         var mainPageFrag = MainPageFragment()
         supportFragmentManager.beginTransaction().replace(R.id.main_page, mainPageFrag).commit()
