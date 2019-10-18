@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainPageActivity"
+    android:id="@+id/main_page">
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        style="@style/toolbar">-->
+
+<!--        <TextView-->
+<!--            style="@style/welcome_toolbar">-->
+<!--        </TextView>-->
+
+<!--    </androidx.appcompat.widget.Toolbar>-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recyclerID"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="540dp"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginTop="3dp">-->
+<!--    </androidx.recyclerview.widget.RecyclerView>-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        app:itemIconTint="@color/black"
+        app:menu="@menu/menu_items">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>

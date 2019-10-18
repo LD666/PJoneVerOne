@@ -1,0 +1,138 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="wp_img_one">
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginLeft">55dp</item>
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">300dp</item>
+    </style>
+
+    <style name="wp_text_one">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginLeft">110dp</item>
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="all_buttons">
+        <item name="android:background">@color/bb</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginLeft">140dp</item>
+        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="up_in_img_one">
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginLeft">95dp</item>
+        <item name="android:layout_width">210dp</item>
+        <item name="android:layout_height">210dp</item>
+    </style>
+
+    <style name="in_up_text_one">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginLeft">80dp</item>
+        <item name="android:layout_width">250dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="main_page">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">220dp</item>
+        <item name="android:layout_centerHorizontal">true</item>
+    </style>
+
+    <style name="go_back_button">
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginLeft">20dp</item>
+    </style>
+
+    <style name="address_edit_text">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_width">390dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="iteam_img">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:layout_height">150dp</item>
+    </style>
+
+    <style name="t_box">
+        <item name="android:textSize">30dp</item>
+        <item name="android:layout_marginLeft">60dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">200dp</item>
+    </style>
+
+    <style name="toolbar">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@color/bb</item>
+    </style>
+
+    <style name="welcome_toolbar">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginLeft">115dp</item>
+        <item name="android:text">Tender Fresh</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="cart_buttons">
+        <item name="android:background">@color/bb</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:layout_marginTop">30dp</item>
+        <item name="android:layout_marginLeft">140dp</item>
+        <item name="android:layout_width">140dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+
+
+    <style name="signUpStyle">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:inputType">text</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="signUpStyleOne">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="signUpStyleButton">
+        <item name="android:layout_marginTop">80dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>
+

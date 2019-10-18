@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.appcompat.widget.Toolbar
+        style="@style/toolbar">
+
+        <ImageView
+            android:id="@+id/image_button_setting"
+            style="@style/go_back_button"
+            app:srcCompat="@drawable/ic_arrow_back_black_24dp">
+        </ImageView>
+
+        <TextView
+            android:textColor="@color/white"
+            style="@style/t_box"
+            android:gravity="center"
+            android:text="@string/setting">
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/text_view_setting"
+        android:text="@string/setting_sign_out_msg"
+        android:layout_marginTop="300dp"
+        style="@style/in_up_text_one">
+    </TextView>
+
+
+    <Button
+        android:id="@+id/button_sign_out"
+        android:text="@string/setting_sign_out"
+        style="@style/all_buttons">
+    </Button>
+
+</LinearLayout>

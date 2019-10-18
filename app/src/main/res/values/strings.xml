@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">PJOneVer.1</string>
+
+    <string name="loading_message">Tender Fresh is loading...</string>
+    <string name="welcome_message">Welcome to Tender Fresh! Sign Up/Sign In here!</string>
+
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_in">Sign In</string>
+
+    <string name="fname">First Name</string>
+    <string name="lname">Last Name</string>
+    <string name="email">Email</string>
+    <string name="address">Address</string>
+    <string name="mobile">Mobile</string>
+    <string name="password">Password</string>
+
+    <string name="setting_sign_out_msg">Please Sign Out Here</string>
+
+    <string name="setting_sign_out">Sign Out</string>
+
+    <string name="user_address">Change or edit User</string>
+
+    <string name="reset_password">Reset Password</string>
+
+    <string name="reset_pass">Reset</string>
+
+    <string name="address_save">Save</string>
+
+    <string name="add_to_cart">Add</string>
+
+    <string name="setting">Setting</string>
+
+    <string name="user_setting">User Setting</string>
+
+    <string name="cart">In Cart</string>
+
+    <string name="remove">Remove</string>
+
+    <string name="reset">Reset</string>
+
+
+</resources>

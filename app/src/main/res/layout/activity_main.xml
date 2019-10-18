@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activity.MainActivity"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        style="@style/toolbar">
+
+        <TextView
+            android:layout_marginLeft="110dp"
+            style="@style/welcome_toolbar">
+        </TextView>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ImageView
+        android:id="@+id/image_view_wp_one"
+        style="@style/wp_img_one"
+        app:srcCompat="@drawable/wp_one" />
+
+
+    <TextView
+        android:id="@+id/text_view_loading"
+        android:text="@string/loading_message"
+        style="@style/wp_text_one">
+    </TextView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_marginTop="20dp"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

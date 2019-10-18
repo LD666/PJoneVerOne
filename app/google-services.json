@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "359265130844",
+    "firebase_url": "https://pjoneverone.firebaseio.com",
+    "project_id": "pjoneverone",
+    "storage_bucket": "pjoneverone.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359265130844:android:1f8c44f78db36c4b7f4999",
+        "android_client_info": {
+          "package_name": "com.myfirstapplication.pjoneverone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359265130844-f2kutrkqokh9fcv4e58e52s79m9k0uuh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.myfirstapplication.pjoneverone",
+            "certificate_hash": "fca3afd8a4ee1deeb6916654c35fdd90da79f123"
+          }
+        },
+        {
+          "client_id": "359265130844-fs6t9miit8sn25ouatfre2svkf75umul.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjDxU1-CkZlE8FvAB9qt90uYBl8tc3gQ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359265130844-fs6t9miit8sn25ouatfre2svkf75umul.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
