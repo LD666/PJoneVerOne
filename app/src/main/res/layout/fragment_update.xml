@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_marginTop="410dp"
+        android:id="@+id/text_view_f_update"
+        android:textSize="50dp"
+        android:layout_width="match_parent"
+        android:gravity="right"
+        android:layout_height="60dp">
+    </TextView>
+
+    <Button
+        android:id="@+id/button_up_update"
+        style="@style/all_buttons"
+        android:layout_width="146dp"
+        android:layout_height="51dp"
+        android:layout_below="@+id/text_view_f_update"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="253dp"
+        android:layout_marginRight="253dp"
+        android:layout_marginBottom="88dp"
+        android:text="@string/update">
+
+    </Button>
+
+</RelativeLayout>

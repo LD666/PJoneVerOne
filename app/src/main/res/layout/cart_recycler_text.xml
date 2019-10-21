@@ -14,7 +14,7 @@
         android:layout_height="190dp">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/button_cart_remove"
             style="@style/cart_buttons"
             android:layout_width="105dp"
             android:layout_height="wrap_content"
@@ -27,22 +27,34 @@
             android:text="@string/remove"></Button>
 
         <ImageView
-            android:id="@+id/iteam_img"
+            android:id="@+id/iteam_cart_img"
             style="@style/iteam_img">
         </ImageView>
 
         <TextView
-            android:layout_width="200dp"
-            android:layout_height="50dp"
+            android:id="@+id/text_view_cart_item_name"
+            android:layout_width="94dp"
+            android:layout_height="49dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_marginTop="22dp"
-            android:layout_marginEnd="41dp"
-            android:layout_marginRight="41dp">
-        </TextView>
+            android:layout_marginEnd="147dp"
+            android:layout_marginRight="147dp"></TextView>
 
         <TextView
+            android:id="@+id/text_view_cart_item_qla"
+            android:layout_width="94dp"
+            android:layout_height="49dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginRight="35dp"></TextView>
+
+        <TextView
+            android:id="@+id/text_view_cart_item_prize"
             android:layout_width="200dp"
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
@@ -54,6 +66,7 @@
         </TextView>
 
         <Button
+            android:id="@+id/cart_buttons_add"
             style="@style/cart_buttons"
             android:layout_width="105dp"
             android:layout_height="wrap_content"

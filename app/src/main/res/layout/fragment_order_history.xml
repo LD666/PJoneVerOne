@@ -14,7 +14,7 @@
             style="@style/toolbar">
 
             <ImageView
-                android:id="@+id/image_button_rd_data"
+                android:id="@+id/image_button_hist"
                 style="@style/go_back_button"
                 app:srcCompat="@drawable/ic_arrow_back_black_24dp">
             </ImageView>
@@ -30,7 +30,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/read_data_recycler"
+        android:id="@+id/history_recycler"
         android:layout_width="match_parent"
         android:layout_height="490dp" />
 

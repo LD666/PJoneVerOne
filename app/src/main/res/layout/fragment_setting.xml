@@ -37,4 +37,10 @@
         style="@style/all_buttons">
     </Button>
 
+    <Button
+        android:id="@+id/button_history"
+        android:text="@string/history"
+        style="@style/all_buttons">
+    </Button>
+
 </LinearLayout>

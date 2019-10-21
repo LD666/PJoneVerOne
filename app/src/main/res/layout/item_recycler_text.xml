@@ -6,12 +6,12 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="250dp"
     card_view:cardCornerRadius="10dp">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="190dp">
+        android:layout_height="250dp">
 
         <ImageView
             android:id="@+id/iteam_img"
@@ -19,37 +19,50 @@
         </ImageView>
 
         <TextView
-            android:layout_width="200dp"
-            android:layout_height="50dp"
+            android:id="@+id/text_view_dis"
+            android:layout_width="213dp"
+            android:layout_height="130dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
             android:layout_marginTop="22dp"
-            android:layout_marginEnd="41dp"
-            android:layout_marginRight="41dp">
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp">
         </TextView>
 
         <TextView
-            android:layout_width="200dp"
-            android:layout_height="50dp"
+            android:id="@+id/text_view_name"
+            android:layout_width="90dp"
+            android:layout_height="46dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="81dp"
-            android:layout_marginEnd="41dp"
-            android:layout_marginRight="41dp">
+            android:layout_marginTop="182dp"
+            android:layout_marginEnd="308dp"
+            android:layout_marginRight="308dp">
         </TextView>
 
+        <TextView
+            android:id="@+id/text_view_prize"
+            android:layout_width="90dp"
+            android:layout_height="46dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="182dp"
+            android:layout_marginEnd="202dp"
+            android:layout_marginRight="202dp"></TextView>
+
         <Button
-            android:text="@string/add_to_cart"
+            android:id="@+id/button_add_to_cart"
             style="@style/all_buttons"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="142dp"
-            android:layout_marginEnd="72dp"
-            android:layout_marginRight="72dp">
-        </Button>
+            android:layout_marginTop="171dp"
+            android:layout_marginEnd="31dp"
+            android:layout_marginRight="31dp"
+            android:text="@string/add_to_cart"></Button>
 
     </RelativeLayout>
 

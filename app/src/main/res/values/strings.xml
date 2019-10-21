@@ -38,5 +38,12 @@
 
     <string name="reset">Reset</string>
 
+    <string name="checkout">Checkout</string>
+
+    <string name="update">Update</string>
+
+    <string name="history">Order History</string>
+
+
 
 </resources>

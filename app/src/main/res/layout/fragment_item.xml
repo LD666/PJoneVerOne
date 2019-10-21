@@ -14,14 +14,13 @@
             style="@style/toolbar">
 
             <ImageView
-                android:id="@+id/image_button_rd_data"
+                android:id="@+id/image_button_item_back"
                 style="@style/go_back_button"
                 app:srcCompat="@drawable/ic_arrow_back_black_24dp">
             </ImageView>
 
             <TextView
-                android:layout_marginLeft="60dp"
-                android:id="@+id/text_view_toolbar_title"
+                android:id="@+id/text_view_item"
                 style="@style/welcome_toolbar">
             </TextView>
 
@@ -30,7 +29,7 @@
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/read_data_recycler"
+        android:id="@+id/item_recycler"
         android:layout_width="match_parent"
         android:layout_height="490dp" />
 

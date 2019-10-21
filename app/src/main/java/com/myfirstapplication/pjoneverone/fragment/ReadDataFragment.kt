@@ -29,10 +29,14 @@ class ReadDataFragment: Fragment() {
     ): View? {
         var view = inflater.inflate(R.layout.fragment_read_data, container, false)
 
+        var saveCatNameID = context!!.getSharedPreferences("saveCatNameID", Context.MODE_PRIVATE)
+
+
         var loginInfo = context!!.getSharedPreferences("userLoginInfo", Context.MODE_PRIVATE)
 
-        var string = ""
-        var id = ""
+        var string = saveCatNameID.getString("saveCatName", null)
+        var id = saveCatNameID.getString("saveCatID", null)
+
         var apiID = loginInfo.getString("appapikey", null)
         var uID = loginInfo.getString("id", null)
 
@@ -50,6 +54,18 @@ class ReadDataFragment: Fragment() {
         Log.d("InreadFrag", apiID)
         Log.d("InreadFrag", id)
 
+
+
+        var editor = saveCatNameID.edit()
+        editor.putString("saveCatName", string)
+        editor.putString("saveCatID", id)
+        editor.commit()
+
+        Log.d("MyCat", saveCatNameID.getString("saveCatName", null))
+        Log.d("MyCat", saveCatNameID.getString("saveCatID", null))
+
+
+
         view.read_data_recycler.layoutManager = LinearLayoutManager(context)
 
         var url = ("http://rjtmobile.com/ansari/shopingcart/androidapp/cust_sub_category.php?Id="+ id +
@@ -61,29 +77,37 @@ class ReadDataFragment: Fragment() {
         var request = StringRequest(Request.Method.GET, url,
             Response.Listener {
 
-                var jsonObject = JSONObject(it)
-                var jsonArray = jsonObject.getJSONArray("subcategory")
 
-                for (i in 0 until(jsonArray.length())){
+                if(JSONObject(it) == null){
 
-                    var contact = jsonArray.getJSONObject(i)
+                }else{
 
-                    var subCatName = contact.getString("scname")
-                    var subCatID = contact.getString("scid")
+                    var jsonObject = JSONObject(it)
+                    var jsonArray = jsonObject.getJSONArray("subcategory")
 
-                    subButton.add(RecycelrMainData(subCatName, subCatID))
+                    for (i in 0 until(jsonArray.length())){
 
+                        var contact = jsonArray.getJSONObject(i)
+
+                        var subCatName = contact.getString("scname")
+                        var subCatID = contact.getString("scid")
+
+                        subButton.add(RecycelrMainData(subCatName, subCatID))
+
+                    }
+
+                    for (i in 0 until subButton.size){
+                        Log.i("inSubList", subButton[i].toString())
+                    }
+
+                    view.read_data_recycler.adapter = SubCatRecyclerAdapter(subButton, this.context)
                 }
-
-                for (i in 0 until subButton.size){
-                    Log.i("inSubList", subButton[i].toString())
-                }
-
-                view.read_data_recycler.adapter = SubCatRecyclerAdapter(subButton, this.context)
 
             }, Response.ErrorListener {  })
 
-        myReq.add(request)
+        if(id != "114"){
+            myReq.add(request)
+        }
 
         view.image_button_rd_data.setOnClickListener(View.OnClickListener {
 

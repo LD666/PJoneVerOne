@@ -6,4 +6,10 @@ interface MyInterface {
 
     fun passIDandName(bundle: Bundle)
 
+    fun passSubIDandName(bundle: Bundle)
+
+    fun passItem (bundle: Bundle)
+
+    fun updateCart (bundle: Bundle)
+
 }

@@ -1,5 +1,6 @@
 package com.myfirstapplication.pjoneverone.fragment
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -30,6 +31,11 @@ class SettingFragment: Fragment() {
             view.text_view_setting.visibility = View.GONE
             view.button_sign_out.visibility = View.GONE
 
+            var token = activity!!.getSharedPreferences("isIn", Context.MODE_PRIVATE)
+            var editor = token.edit()
+            editor.putString("my_token", null)
+            editor.commit()
+
             var myIntent = Intent(context, WelcomeActivity::class.java)
             startActivity(myIntent)
 
@@ -39,6 +45,13 @@ class SettingFragment: Fragment() {
 
             var myIntent = Intent(context, MainPageActivity::class.java)
             startActivity(myIntent)
+
+        })
+
+        view.button_history.setOnClickListener(View.OnClickListener {
+
+            var historyFragment = OrderHistoryFragment()
+            fragmentManager!!.beginTransaction().replace(R.id.main_page, historyFragment).commit()
 
         })
 
