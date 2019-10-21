@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.myfirstapplication.pjoneverone.R
 import com.myfirstapplication.pjoneverone.activity.MainPageActivity
 import com.myfirstapplication.pjoneverone.fragment.*
@@ -21,6 +22,8 @@ import kotlinx.android.synthetic.main.main_recycler_text.view.*
 class Handler(view: View): RecyclerView.ViewHolder(view){
 
     var button = view.button_items
+    var img = view.cat_img
+    var dis = view.text_view_cat
 
 }
 
@@ -39,6 +42,8 @@ class MainRecyclerAdapter(var item: ArrayList<RecycelrMainData>, val context: Co
 
     override fun onBindViewHolder(holder: Handler, position: Int) {
         holder.button.text = item[position].itemName
+        holder.dis.text = item[position].catDiscription
+        Glide.with(this.context!!).load(item[position].catImg).into(holder.img)
 
         holder.button.setOnClickListener(View.OnClickListener {
 

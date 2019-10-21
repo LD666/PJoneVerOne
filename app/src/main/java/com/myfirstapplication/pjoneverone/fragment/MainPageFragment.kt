@@ -58,7 +58,11 @@ class MainPageFragment: Fragment() {
                 var catName = contact.getString("cname")
                 var catId = contact.getString("cid")
 
-                buttons.add(RecycelrMainData(catName, catId))
+
+                var catDiscription = contact.getString("cdiscription")
+                var catImg = contact.getString("cimagerl")
+
+                buttons.add(RecycelrMainData(catName, catId, catDiscription, catImg))
 
             }
 

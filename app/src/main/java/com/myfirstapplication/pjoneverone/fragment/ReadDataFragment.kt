@@ -92,7 +92,11 @@ class ReadDataFragment: Fragment() {
                         var subCatName = contact.getString("scname")
                         var subCatID = contact.getString("scid")
 
-                        subButton.add(RecycelrMainData(subCatName, subCatID))
+                        var subCatDiscription = contact.getString("scdiscription")
+                        var subCatImg = contact.getString("scimageurl")
+
+
+                        subButton.add(RecycelrMainData(subCatName, subCatID, subCatDiscription, subCatImg))
 
                     }
 
