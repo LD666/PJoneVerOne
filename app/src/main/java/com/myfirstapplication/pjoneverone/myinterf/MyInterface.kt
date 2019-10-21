@@ -12,4 +12,10 @@ interface MyInterface {
 
     fun updateCart (bundle: Bundle)
 
+    fun secondUpdateCart (bundle: Bundle)
+
+    fun secondAddRmUpdateCart (bundle: Bundle)
+
+
+
 }

@@ -34,10 +34,10 @@ class HistoryAdapter(var item: ArrayList<HistoryData>, var context: Context?): R
 
 
     override fun onBindViewHolder(holder: HistoryHolder, position: Int) {
-        holder.theOrderid.text = item[position].orderid
-        holder.theName.text = item[position].name
-        holder.theMobile.text = item[position].mobile
-        holder.theEmail.text = item[position].email
-        holder.thePlacedon.text = item[position].placedon
+        holder.theOrderid.text = "Order ID: " + item[position].orderid
+        holder.theName.text = "Your name: " + item[position].name
+        holder.theMobile.text = "Your Mobile: " + item[position].mobile
+        holder.theEmail.text = "Your Order Email: " + item[position].email
+        holder.thePlacedon.text = "Order Complited Time" + item[position].placedon
     }
 }

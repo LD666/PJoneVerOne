@@ -46,7 +46,15 @@ class MyCartAdapter(var item: ArrayList<CartCalculateData>, var context: Context
         Glide.with(this.context!!).load(item[position].itemImg).into(holder.img)
 
 
+//        var passData = this.context as MyInterface
+//        var bundle = Bundle()
+//        bundle.putInt("TheTotal", item[position].itemAllPrize)
+//        passData.updateCart(bundle)
 
+        var passData = this.context as MyInterface
+        var bundle = Bundle()
+        bundle.putInt("TheSecondTotal", item[position].itemAllPrize)
+        passData.secondUpdateCart(bundle)
 
         holder.addB.setOnClickListener(View.OnClickListener {
 
@@ -56,11 +64,21 @@ class MyCartAdapter(var item: ArrayList<CartCalculateData>, var context: Context
             Log.i("NewTotal", item[position].itemAllPrize.toString())
 
             var passData = this.context as MyInterface
+            var passTotal = this.context as MyInterface
             var bundle = Bundle()
             bundle.putInt("TheTotal", item[position].itemAllPrize)
             bundle.putString("TheID", item[position].itemID)
             bundle.putInt("TheQul", item[position].itemQunt)
             passData.updateCart(bundle)
+            passTotal.secondAddRmUpdateCart(bundle)
+
+//            var passTotal = this.context as MyInterface
+//            var totalBundle = Bundle()
+//            totalBundle.putInt("TheSecondUpdateTotal", item[position].itemAllPrize)
+//            var gg = totalBundle.getInt("TheSecondUpdateTotal")
+//            totalBundle.putInt("gg", gg)
+//            Log.i("TheSecondUpdateTotal", gg.toString())
+//            passTotal.secondAddRmUpdateCart(bundle)
         })
 
 
@@ -72,14 +90,22 @@ class MyCartAdapter(var item: ArrayList<CartCalculateData>, var context: Context
                 holder.qla.text = "quantity: " + item[position].itemQunt.toString()
 
                 var passData = this.context as MyInterface
+                var passTotal = this.context as MyInterface
                 var bundle = Bundle()
                 bundle.putInt("TheTotal", item[position].itemAllPrize)
                 bundle.putString("TheID", item[position].itemID)
                 bundle.putInt("TheQul", item[position].itemQunt)
                 passData.updateCart(bundle)
+                passTotal.secondAddRmUpdateCart(bundle)
+
+//                var passTotal = this.context as MyInterface
+//                var totalBundle = Bundle()
+//                totalBundle.putInt("TheSecondUpdateTotal", item[position].itemAllPrize)
+//                passTotal.secondAddRmUpdateCart(bundle)
             }
 
         })
 
     }
+
 }

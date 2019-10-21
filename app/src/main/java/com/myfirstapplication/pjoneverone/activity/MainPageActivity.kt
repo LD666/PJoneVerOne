@@ -13,10 +13,33 @@ import com.myfirstapplication.pjoneverone.recycler_data.FirstItemsListData
 import kotlinx.android.synthetic.main.cart_recycler_text.*
 
 class MainPageActivity : AppCompatActivity(), MyInterface {
+    override fun secondAddRmUpdateCart(bundle: Bundle) {
+
+        var secondUpdate =SecondUpdate()
+        var passUpdateCart = bundle.getInt("TheTotal")
+        Log.i("InMinSecondUpdateTT", passUpdateCart.toString())
+        bundle.putInt("putTheSecondUpdateTotal", passUpdateCart)
+
+        secondUpdate.arguments = bundle
+        supportFragmentManager.beginTransaction().add(R.id.main_page, secondUpdate).commit()
+    }
+
+    override fun secondUpdateCart(bundle: Bundle) {
+
+        var secondUpdate =SecondUpdate()
+
+        var passUpdateCart = bundle.getInt("TheSecondTotal")
+        Log.i("InMinSecondUpdate", passUpdateCart.toString())
+        bundle.putInt("putTheSecondTotal", passUpdateCart)
+        secondUpdate.arguments = bundle
+        supportFragmentManager.popBackStack()
+        supportFragmentManager.beginTransaction().add(R.id.main_page, secondUpdate).commit()
+    }
 
     var itemQlList: ArrayList<Int> = ArrayList()
 
     override fun updateCart(bundle: Bundle) {
+
 
         var passUpdateCart = bundle.getInt("TheTotal")
         var passUpdateCartID = bundle.getString("TheID")
@@ -49,6 +72,7 @@ class MainPageActivity : AppCompatActivity(), MyInterface {
 
         pass.getInt("passThisTotal", 0)
         checkOutFragment.arguments = bundle
+
 //        supportFragmentManager.beginTransaction().add(R.id.main_page, checkOutFragment).commit()
 
 

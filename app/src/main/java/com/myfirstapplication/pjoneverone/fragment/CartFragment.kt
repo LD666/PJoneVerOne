@@ -51,7 +51,7 @@ class CartFragment: Fragment() {
         var theTotal = arguments!!.getInt("passTheUpdateCartTotal")
         Log.i("InCartTheTotal", theTotal.toString())
 
-        view.text_view_total_prize.text = "Total: " + allPrize.toString()
+        //view.text_view_total_prize.text = "Total: " + allPrize.toString()
 
         view.cart_recycler.layoutManager = LinearLayoutManager(context)
         view.cart_recycler.adapter = MyCartAdapter(iteamList, this.context)
@@ -61,19 +61,17 @@ class CartFragment: Fragment() {
             showSettingDialoge()
         })
 
-        var gone = 0
-
-        view.button_cart_update.setOnClickListener(View.OnClickListener {
-
-            view.text_view_total_prize.text = ""
-
-            var updateFragment = UpdateFragment()
-            fragmentManager!!.beginTransaction().add(R.id.main_page, updateFragment).commit()
-            view.button_cart_update.visibility = View.GONE
-
-            gone = 1
-
-        })
+//        view.button_cart_update.setOnClickListener(View.OnClickListener {
+//
+//            view.text_view_total_prize.text = ""
+//
+//            var updateFragment = UpdateFragment()
+//            fragmentManager!!.beginTransaction().add(R.id.main_page, updateFragment).commit()
+//            view.button_cart_update.visibility = View.GONE
+//
+//            gone = 1
+//
+//        })
 
         view.button_cart_checkout.setOnClickListener(View.OnClickListener {
 
@@ -83,10 +81,7 @@ class CartFragment: Fragment() {
             bundle.putStringArrayList("itemID", id)
             bundle.putStringArrayList("itemName", name)
             bundle.putStringArrayList("itemPrize", prize)
-
-            if(gone != 1){
-                bundle.putIntegerArrayList("itemQla", qla)
-            }
+            bundle.putIntegerArrayList("itemQla", qla)
 
 
 
